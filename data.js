@@ -68,18 +68,6 @@ window.PROJECT_DATA = {
       },
     },
     {
-      id: "0007",
-      label: "Scene 0007",
-      input: "assets/videos/0007/pers.mp4",
-      videos: {
-        ours: "assets/videos/0007/ours.mp4",
-        viewpoint: "assets/videos/0007/viewpoint.mp4",
-        cubecomposer: "assets/videos/0007/cubecomposer.mp4?v=2",
-        argus: "assets/videos/0007/argus.mp4",
-        imagine360: "assets/videos/0007/imagine360.mp4",
-      },
-    },
-    {
       id: "0043",
       label: "Scene 0043",
       input: "assets/videos/0043/pers.mp4",
@@ -89,6 +77,18 @@ window.PROJECT_DATA = {
         cubecomposer: "assets/videos/0043/cubecomposer.mp4?v=2",
         argus: "assets/videos/0043/argus.mp4",
         imagine360: "assets/videos/0043/imagine360.mp4",
+      },
+    },
+    {
+      id: "0007",
+      label: "Scene 0007",
+      input: "assets/videos/0007/pers.mp4",
+      videos: {
+        ours: "assets/videos/0007/ours.mp4",
+        viewpoint: "assets/videos/0007/viewpoint.mp4",
+        cubecomposer: "assets/videos/0007/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0007/argus.mp4",
+        imagine360: "assets/videos/0007/imagine360.mp4",
       },
     },
     {
