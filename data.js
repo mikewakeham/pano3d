@@ -1,0 +1,95 @@
+window.PROJECT_DATA = {
+  methods: [
+    { id: "imagine360", label: "Imagine360" },
+    { id: "viewpoint", label: "ViewPoint" },
+    { id: "cubecomposer", label: "CubeComposer" },
+    { id: "argus", label: "Argus" },
+    { id: "ours", label: "Ours" },
+  ],
+  examples: [
+    {
+      id: "0074",
+      label: "Scene 0074",
+      input: "assets/videos/0074/pers.mp4",
+      videos: {
+        ours: "assets/videos/0074/ours.mp4",
+        viewpoint: "assets/videos/0074/viewpoint.mp4",
+        cubecomposer: "assets/videos/0074/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0074/argus.mp4",
+        imagine360: "assets/videos/0074/imagine360.mp4",
+      },
+    },
+    {
+      id: "0061",
+      label: "Scene 0061",
+      input: "assets/videos/0061/pers.mp4",
+      videos: {
+        ours: "assets/videos/0061/ours.mp4",
+        viewpoint: "assets/videos/0061/viewpoint.mp4",
+        cubecomposer: "assets/videos/0061/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0061/argus.mp4",
+        imagine360: "assets/videos/0061/imagine360.mp4",
+      },
+    },
+    {
+      id: "0046",
+      label: "Scene 0046",
+      input: "assets/videos/0046/pers.mp4",
+      videos: {
+        ours: "assets/videos/0046/ours.mp4",
+        viewpoint: "assets/videos/0046/viewpoint.mp4",
+        cubecomposer: "assets/videos/0046/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0046/argus.mp4",
+        imagine360: "assets/videos/0046/imagine360.mp4",
+      },
+    },
+    {
+      id: "0009",
+      label: "Scene 0009",
+      input: "assets/videos/0009/pers.mp4",
+      videos: {
+        ours: "assets/videos/0009/ours.mp4",
+        viewpoint: "assets/videos/0009/viewpoint.mp4",
+        cubecomposer: "assets/videos/0009/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0009/argus.mp4",
+        imagine360: "assets/videos/0009/imagine360.mp4",
+      },
+    },
+    {
+      id: "0037",
+      label: "Scene 0037",
+      input: "assets/videos/0037/pers.mp4",
+      videos: {
+        ours: "assets/videos/0037/ours.mp4",
+        viewpoint: "assets/videos/0037/viewpoint.mp4",
+        cubecomposer: "assets/videos/0037/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0037/argus.mp4",
+        imagine360: "assets/videos/0037/imagine360.mp4",
+      },
+    },
+    {
+      id: "0007",
+      label: "Scene 0007",
+      input: "assets/videos/0007/pers.mp4",
+      videos: {
+        ours: "assets/videos/0007/ours.mp4",
+        viewpoint: "assets/videos/0007/viewpoint.mp4",
+        cubecomposer: "assets/videos/0007/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0007/argus.mp4",
+        imagine360: "assets/videos/0007/imagine360.mp4",
+      },
+    },
+    {
+      id: "0023",
+      label: "Scene 0023",
+      input: "assets/videos/0023/pers.mp4",
+      videos: {
+        ours: "assets/videos/0023/ours.mp4",
+        viewpoint: "assets/videos/0023/viewpoint.mp4",
+        cubecomposer: "assets/videos/0023/cubecomposer.mp4?v=2",
+        argus: "assets/videos/0023/argus.mp4",
+        imagine360: "assets/videos/0023/imagine360.mp4",
+      },
+    },
+  ],
+};

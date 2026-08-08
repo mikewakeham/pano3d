@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</title>
+    <meta
+      property="og:title"
+      content="A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation"
+    />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mikewakeham.github.io/pano3d/" />
+    <link rel="stylesheet" href="styles.css?v=39" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</h1>
+        <!-- <p class="authors">Anonymous Authors</p> -->
+        <!-- <p class="affiliation">Your University or Research Lab</p> -->
+        <!-- <p class="venue">Project page · 2026</p> -->
+        <!-- <div class="resource-links">
+          <a href="#">Paper</a>
+          <a href="#">Code</a>
+        </div> -->
+      </header>
+
+      <img
+        class="method-image"
+        src="assets/images/panorama-method.png"
+        alt="Overview diagram of our panoramic video generation method."
+        width="6000"
+        height="2377"
+        draggable="false"
+      />
+
+      <section id="abstract">
+        <h2>Abstract</h2>
+        <p class="body-copy">
+          Turning a moving-camera perspective video into a 360° video requires more than just generating content outside the input frame: observations revealed over time must be preserved, unseen regions completed, and the resulting scene kept consistent as the camera viewpoint changes. Existing methods assign these different tasks to a single conditional video model, requiring them to be learned jointly from panoramic video data. We instead present a modular, 3D-driven framework that distributes these three responsibilities across specialized components, all connected through a shared scene representation. Input observations are reconstructed into explicit 3D, while a pretrained panoramic image model completes unobserved content from a selected panoramic render. This generated content is lifted into the shared 3D scene, where it remains spatially anchored across camera viewpoints. Without requiring any additional panoramic-video training, our framework achieves state-of-the-art input-view fidelity, perceptual quality, and geometric consistency on a static-scene subset of the Argus evaluation set. These results support our decomposed, 3D-driven formulation as a promising alternative to direct video generation in this setting.
+        </p>
+      </section>
+
+      <section id="gallery">
+        <h2>Results</h2>
+        <p class="section-description">
+          Use the arrows to move between scenes. Click any panorama to explore it as a 360° viewport.
+        </p>
+
+        <div class="scene-navigation" aria-label="Scene navigation">
+          <button id="previousScene" class="arrow-button" type="button" aria-label="Previous scene">←</button>
+          <button id="nextScene" class="arrow-button" type="button" aria-label="Next scene">→</button>
+        </div>
+
+        <div class="scene-divider" aria-hidden="true"></div>
+
+        <div id="comparisonGrid" class="comparison-grid" aria-live="polite"></div>
+      </section>
+
+      <footer><p>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</p></footer>
+    </main>
+
+    <script src="data.js?v=40"></script>
+    <script src="assets/vendor/three.min.js?v=128"></script>
+    <script src="app.js?v=38"></script>
+  </body>
+</html>

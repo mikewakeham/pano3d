@@ -1,0 +1,228 @@
+:root {
+  font-family: "Myriad Pro", "Myriad Set Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  font-synthesis: none;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; background: #fff; }
+button { font: inherit; }
+h1, h3, strong { font-weight: 600; }
+
+@media (min-width: 701px) {
+  body { zoom: 0.75; }
+}
+
+.page {
+  width: min(100% - 40px, 1500px);
+  margin: 0 auto;
+}
+
+.hero {
+  margin-bottom: 54px;
+  padding: 72px 0 44px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+
+h1 {
+  max-width: 1400px;
+  margin: 0 auto 24px;
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 500;
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.authors, .affiliation, .venue { margin: 8px 0; }
+.authors { font-size: 28px; }
+.affiliation { color: #555; font-size: 22px; }
+.venue { font-size: 20px; font-weight: 550; }
+
+.resource-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.resource-links a {
+  padding: 9px 18px;
+  border-radius: 999px;
+  color: #fff;
+  background: #222;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+section { margin-bottom: 78px; }
+h2 { margin: 0 0 16px; font-size: 36px; font-weight: 500; text-align: center; }
+
+.body-copy, .section-description {
+  margin: 0 auto;
+  color: #444;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.body-copy {
+  max-width: 980px;
+  text-align: justify;
+}
+
+.section-description {
+  max-width: 1200px;
+  margin-bottom: 26px;
+  font-style: italic;
+  text-align: center;
+}
+
+.method-image {
+  display: block;
+  width: 75%;
+  height: auto;
+  margin: 0 auto 54px;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.scene-navigation {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+}
+
+.scene-divider {
+  height: 1px;
+  margin: 0 0 28px;
+  background: #ddd;
+}
+
+.arrow-button {
+  width: 46px;
+  height: 40px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  color: #222;
+  background: #fff;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.arrow-button:hover, .arrow-button:focus-visible { border-color: #222; }
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px 20px;
+}
+
+.media-frame,
+.media-frame video,
+.viewport-canvas {
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.input-card h3,
+.video-card h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.media-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  background: #fff;
+}
+
+.media-frame video,
+.viewport-canvas {
+  position: absolute !important;
+  inset: 0;
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.media-frame video { object-fit: fill; cursor: pointer; }
+.input-card .media-frame {
+  max-width: 100%;
+  margin-inline: auto;
+}
+.input-card .media-frame video { object-fit: contain; cursor: default; }
+
+.media-frame video.is-source-only {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.viewport-canvas { cursor: grab; touch-action: none; }
+.viewport-canvas.is-dragging { cursor: grabbing; }
+
+.video-status {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 3;
+  padding: 6px 9px;
+  border: 0;
+  color: #eee;
+  background: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.video-status.is-hidden { display: none; }
+
+.back-button {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: #222;
+  background: transparent;
+  cursor: pointer;
+  font-size: 15px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.back-button[hidden] { display: none; }
+
+.viewport-action-slot {
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7px;
+}
+
+footer {
+  padding: 26px 0 42px;
+  border-top: 1px solid #ddd;
+  color: #777;
+  font-size: 15px;
+  text-align: center;
+}
+
+@media (max-width: 1000px) {
+  .comparison-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .method-image { width: 80%; }
+}
+
+@media (max-width: 700px) {
+  .page { width: min(100% - 24px, 1500px); }
+  .hero { padding-top: 50px; }
+  section { margin-bottom: 60px; }
+  .comparison-grid { grid-template-columns: 1fr; }
+  .method-image { width: 100%; margin-bottom: 54px; }
+}
