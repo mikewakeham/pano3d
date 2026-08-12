@@ -92,6 +92,18 @@ window.PROJECT_DATA = {
       },
     },
     {
+      id: "museum2_cut1",
+      label: "Museum 2, Cut 1",
+      input: "assets/videos/museum2_cut1/pers.mp4",
+      videos: {
+        ours: "assets/videos/museum2_cut1/ours.mp4",
+        viewpoint: "assets/videos/museum2_cut1/viewpoint.mp4",
+        cubecomposer: "assets/videos/museum2_cut1/cubecomposer.mp4",
+        argus: "assets/videos/museum2_cut1/argus.mp4",
+        imagine360: "assets/videos/museum2_cut1/imagine360.mp4",
+      },
+    },
+    {
       id: "0023",
       label: "Scene 0023",
       input: "assets/videos/0023/pers.mp4",
