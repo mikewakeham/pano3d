@@ -44,6 +44,11 @@
 
       <section id="gallery">
         <h2>Gallery</h2>
+        <p id="localServerNotice" class="local-server-notice" hidden>
+          <strong>Interactive 360° viewing requires a local server.</strong>
+          From this folder, run <code>python3 -m http.server 8000</code>, then open
+          <a href="http://localhost:8000">http://localhost:8000</a>.
+        </p>
         <p class="section-description">
           Use the arrows to move between scenes. <strong>Click any panorama to explore it as an interactive 360° viewport.</strong>
         </p>
@@ -61,6 +66,11 @@
       <footer><p>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</p></footer>
     </main>
 
+    <script>
+      if (window.location.protocol === "file:") {
+        document.getElementById("localServerNotice").hidden = false;
+      }
+    </script>
     <script src="data.js?v=41"></script>
     <script src="assets/vendor/three.min.js?v=128"></script>
     <script src="app.js?v=38"></script>
