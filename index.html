@@ -11,7 +11,7 @@
     <meta property="og:description" content="" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mikewakeham.github.io/pano3d/" />
-    <link rel="stylesheet" href="styles.css?v=39" />
+    <link rel="stylesheet" href="styles.css?v=47" />
   </head>
   <body>
     <main class="page">
@@ -63,6 +63,17 @@
         <div id="comparisonGrid" class="comparison-grid" aria-live="polite"></div>
       </section>
 
+      <section id="ablations">
+        <h2>Ablation Example</h2>
+        <p class="section-description">
+          <strong>Click any panorama to explore it as an interactive 360° viewport.</strong>
+        </p>
+
+        <div class="scene-divider" aria-hidden="true"></div>
+
+        <div id="ablationGrid" class="comparison-grid"></div>
+      </section>
+
       <footer><p>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</p></footer>
     </main>
 
@@ -71,8 +82,8 @@
         document.getElementById("localServerNotice").hidden = false;
       }
     </script>
-    <script src="data.js?v=41"></script>
+    <script src="data.js?v=45"></script>
     <script src="assets/vendor/three.min.js?v=128"></script>
-    <script src="app.js?v=38"></script>
+    <script src="app.js?v=42"></script>
   </body>
 </html>

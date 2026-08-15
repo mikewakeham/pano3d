@@ -3,6 +3,7 @@
 
   const project = window.PROJECT_DATA;
   const grid = document.querySelector("#comparisonGrid");
+  const ablationGrid = document.querySelector("#ablationGrid");
   const previousButton = document.querySelector("#previousScene");
   const nextButton = document.querySelector("#nextScene");
 
@@ -184,9 +185,10 @@
     if (!animationFrame) renderViewports();
   }
 
-  function createMethodCard(method, source, cardIndex) {
+  function createMethodCard(method, source, cardIndex, idPrefix) {
     const card = document.createElement("article");
     card.className = "video-card";
+    if (method.caption) card.classList.add("has-caption");
 
     const title = document.createElement("h3");
     title.textContent = method.label;
@@ -195,7 +197,7 @@
     mediaFrame.className = "media-frame";
 
     const video = document.createElement("video");
-    video.id = "scene-" + sceneIndex + "-method-" + cardIndex;
+    video.id = (idPrefix || "scene-" + sceneIndex) + "-method-" + cardIndex;
     video.src = source;
     video.autoplay = true;
     video.loop = true;
@@ -228,6 +230,16 @@
     const actionSlot = document.createElement("div");
     actionSlot.className = "viewport-action-slot";
     actionSlot.append(backButton);
+    if (method.caption) actionSlot.classList.add("is-overlay");
+
+    let caption = null;
+    if (method.caption) {
+      caption = document.createElement("p");
+      caption.className = "ablation-caption";
+      const captionName = document.createElement("em");
+      captionName.textContent = method.label;
+      caption.append(captionName, document.createTextNode(" " + method.caption));
+    }
 
     video.addEventListener("loadedmetadata", function () {
       if (video.videoWidth && video.videoHeight) {
@@ -261,7 +273,38 @@
     });
 
     mediaFrame.append(video, status);
-    card.append(title, mediaFrame, actionSlot);
+    if (method.caption) {
+      mediaFrame.append(actionSlot);
+      card.append(title, mediaFrame);
+    } else {
+      card.append(title, mediaFrame, actionSlot);
+    }
+    if (caption) card.append(caption);
+    return card;
+  }
+
+  function createPlaceholderCard(method) {
+    const card = document.createElement("article");
+    card.className = "video-card";
+    if (method.caption) card.classList.add("has-caption");
+
+    const title = document.createElement("h3");
+    title.textContent = method.label;
+
+    const placeholder = document.createElement("div");
+    placeholder.className = "media-frame placeholder-frame";
+    placeholder.setAttribute("role", "status");
+    placeholder.textContent = "Coming soon";
+
+    card.append(title, placeholder);
+    if (method.caption) {
+      const caption = document.createElement("p");
+      caption.className = "ablation-caption";
+      const captionName = document.createElement("em");
+      captionName.textContent = method.label;
+      caption.append(captionName, document.createTextNode(" " + method.caption));
+      card.append(caption);
+    }
     return card;
   }
 
@@ -345,6 +388,23 @@
     renderScene();
   }
 
+  function renderAblations() {
+    if (!ablationGrid || !project.ablations) return;
+
+    ablationGrid.replaceChildren();
+    if (project.ablations.input) {
+      ablationGrid.appendChild(createInputCard(project.ablations.input));
+    }
+
+    project.ablations.methods.forEach(function (method, index) {
+      if (method.source) {
+        ablationGrid.appendChild(createMethodCard(method, method.source, index, "ablation"));
+      } else {
+        ablationGrid.appendChild(createPlaceholderCard(method));
+      }
+    });
+  }
+
   previousButton.addEventListener("click", function () {
     moveScene(-1);
   });
@@ -359,4 +419,5 @@
   });
 
   renderScene();
+  renderAblations();
 })();

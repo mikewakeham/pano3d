@@ -4,8 +4,42 @@ window.PROJECT_DATA = {
     { id: "viewpoint", label: "ViewPoint" },
     { id: "cubecomposer", label: "CubeComposer" },
     { id: "argus", label: "Argus" },
-    { id: "ours", label: "Ours" },
+    { id: "ours", label: "Ours + Fill" },
   ],
+  ablations: {
+    input: "assets/videos/0043/pers.mp4",
+    methods: [
+      {
+        id: "panorama_only_3d",
+        label: "Panorama-Only 3D",
+        source: "assets/videos/0043/ablation/0043-panorama-only_3d.mp4",
+        caption: "discards the input reconstruction, keeping only the 3D-lifted panorama.",
+      },
+      {
+        id: "unmasked_3d_lifting",
+        label: "Unmasked 3D Lifting",
+        source: "assets/videos/0043/ablation/0043-unmasked_3d_fusion.mp4",
+        caption: "lifts the full panorama and fuses it without input-observation masking, allowing generated content to overlap existing geometry.",
+      },
+      {
+        id: "single_frame_condition",
+        label: "Single-Frame Conditioned",
+        source: "assets/videos/0043/ablation/0043-single_frame_conditioning.mp4",
+        caption: "conditions the outpainting on a single input frame rather than the rendered full-video reconstruction.",
+      },
+      {
+        id: "per_frame_completion",
+        label: "Per-Frame Completion",
+        source: "assets/videos/0043/ablation/0043-per_frame_completion.mp4",
+        caption: "completes each rendered panoramic frame using the same prompt and seed, without any 3D persistence.",
+      },
+      {
+        id: "ours",
+        label: "Ours",
+        source: "assets/videos/0043/ablation/0043_ours-no_fill.mp4",
+      },
+    ],
+  },
   examples: [
     {
       id: "0074",
