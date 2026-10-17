@@ -308,9 +308,35 @@ footer {
 }
 
 @media (max-width: 700px) {
-  .page { width: min(100% - 24px, 1500px); }
-  .hero { padding-top: 50px; }
-  section { margin-bottom: 60px; }
+  .page { width: calc(100% - 32px); }
+  .hero { padding-top: 32px; margin-bottom: 28px; }
+  h1 { font-size: 28px; line-height: 1.2; margin-bottom: 22px; }
+  .authors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px 12px;
+    max-width: 440px;
+    font-size: 18px;
+    line-height: 1.45;
+  }
+  .author-row { display: contents; }
+  .author-row > span { white-space: nowrap; }
+  .affiliation { margin-top: 12px; font-size: 16px; gap: 2px 14px; }
+  .venue { margin-top: 22px; font-size: 20px; line-height: 1.4; }
+  .resource-links { margin-top: 16px; }
+  .resource-link { min-width: 104px; min-height: 44px; padding: 9px 16px; font-size: 16px; }
+  .resource-link svg { width: 18px; height: 18px; }
+  .resource-link .ai { width: 18px; font-size: 18px; }
+  .header-divider { margin-top: 28px; }
+  section { margin-bottom: 48px; }
+  h2 { font-size: 26px; margin-bottom: 14px; }
+  .body-copy, .section-description, .local-server-notice { font-size: 16px; line-height: 1.6; }
+  .body-copy { text-align: left; }
+  .section-description { margin-bottom: 20px; }
+  .input-card h3, .video-card h3 { font-size: 18px; }
+  .ablation-caption { font-size: 14px; }
+  footer { font-size: 13px; }
   .comparison-grid { grid-template-columns: 1fr; }
-  .method-image { width: 100%; margin-bottom: 80px; }
+  .method-image { width: 100%; margin-bottom: 56px; }
 }
