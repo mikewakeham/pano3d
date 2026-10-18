@@ -53,6 +53,7 @@ h1 {
 }
 .author-row > span, .affiliation > span { white-space: nowrap; }
 .hero sup { margin-left: 2px; font-size: 0.65em; }
+.authors sup { font-weight: 400; color: #555; }
 .affiliation { margin-top: 6px; color: #555; font-size: 22px; line-height: 1.5; }
 .affiliation sup { margin: 0 3px 0 0; }
 .venue { margin-top: 28px; font-size: 28px; font-weight: 400; }
