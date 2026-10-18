@@ -12,7 +12,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mikewakeham.github.io/pano3d/" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" />
-    <link rel="stylesheet" href="styles.css?v=76" />
+    <link rel="stylesheet" href="styles.css?v=84" />
   </head>
   <body>
     <main class="page">
@@ -98,6 +98,27 @@
         <div id="ablationGrid" class="comparison-grid"></div>
       </section>
 
+      <section id="bibtex" aria-labelledby="bibtex-heading">
+        <h2 id="bibtex-heading">BibTeX</h2>
+        <div class="citation-box">
+          <div class="citation-toolbar">
+            <span id="copy-status" role="status" aria-live="polite"></span>
+            <button id="copy-bibtex" type="button" aria-label="Copy BibTeX" title="Copy BibTeX">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="8" y="8" width="12" height="13" rx="2" />
+                <path d="M16 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h3" />
+              </svg>
+            </button>
+          </div>
+          <pre tabindex="0" aria-label="BibTeX citation"><code id="bibtex-code">@inproceedings{wakeham2027pano3d,
+  title={A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation},
+  author={Wakeham, Michael and Das, Mrinmoy Kumar and Wang, Wenqi and Tewari, Ayush and Gong, Boqing and Ghadiyaram, Deepti},
+  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
+  year={2027}
+}</code></pre>
+        </div>
+      </section>
+
       <footer><p>A 3D-Driven Framework for Moving-Camera Perspective-to-360° Video Generation</p></footer>
     </main>
 
@@ -109,5 +130,6 @@
     <script src="data.js?v=44"></script>
     <script src="assets/vendor/three.min.js?v=128"></script>
     <script src="app.js?v=41"></script>
+    <script src="citation.js?v=2"></script>
   </body>
 </html>

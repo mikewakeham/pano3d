@@ -294,9 +294,60 @@ h2 { margin: 0 0 16px; font-size: 36px; font-weight: 500; text-align: center; }
   font-weight: 500;
 }
 
-footer {
-  padding: 26px 0 42px;
+#bibtex { margin-bottom: 48px; }
+
+#bibtex::before {
+  content: "";
+  display: block;
+  margin: 0 auto 40px;
   border-top: 1px solid #ddd;
+}
+
+.citation-box {
+  max-width: 960px;
+  margin: 0 auto;
+  border: 1px solid #e4e4e4;
+  border-radius: 8px;
+  background: #f6f6f6;
+  overflow: hidden;
+}
+.citation-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 48px;
+  padding: 8px 8px 0;
+  gap: 8px;
+  color: #666;
+  font-size: 14px;
+}
+#copy-bibtex {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #555;
+  background: transparent;
+  cursor: pointer;
+}
+#copy-bibtex:hover { background: #e8e8e8; }
+#copy-bibtex:focus-visible { outline: 2px solid #1988d1; outline-offset: -2px; }
+#copy-bibtex svg { width: 20px; height: 20px; }
+.citation-box pre {
+  margin: 0;
+  padding: 0 22px 22px;
+  overflow-x: auto;
+  font: 15px/1.65 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  color: #333;
+  white-space: pre;
+}
+.citation-box code { font: inherit; }
+
+footer {
+  padding: 0 0 42px;
   color: #777;
   font-size: 15px;
   text-align: center;
@@ -337,6 +388,7 @@ footer {
   .input-card h3, .video-card h3 { font-size: 18px; }
   .ablation-caption { font-size: 14px; }
   footer { font-size: 13px; }
+  .citation-box pre { padding: 0 16px 16px; font-size: 13px; }
   .comparison-grid { grid-template-columns: 1fr; }
   .method-image { width: 100%; margin-bottom: 56px; }
 }
